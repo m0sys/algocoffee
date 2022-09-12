@@ -1,12 +1,14 @@
+package com.m0.algo.clients;
+
 /*
  * Sedgewick 4th Edition: S1.1 - Basic Programming Model
  *
- * Problem 1.1.13: Write a code fragment to print the transposition (rows and
- *                 columns changed) of a two-dimensional array with M rows and N
- *                 columns.
+ * Problem 1.1.11: Write a code fragment that prints the contents of a
+ *                 two-dimensional boolean array, using * to represent true and
+ *                 a space to represent false. Include row and column numbers.
  */
 
-public class Transpose {
+public class MatrixStar {
   public static void main(String[] args) {
     if (args.length < 2) {
       System.out.println("Please enter 2 int command line argument.");
@@ -27,28 +29,10 @@ public class Transpose {
         else
           truth[i][j] = true;
 
-    // Transpose the stuff.
-    Boolean[][] ttruth = new Boolean[N][M];
-    for (int i = 0; i < M; i++)
-      for (int j = 0; j < N; j++)
-        ttruth[j][i] = truth[i][j];
-
-    // Print the old stuff.
-    System.out.printf("\n\n");
+    // Print the stuff.
     for (int i = 0; i < M; i++) {
       for (int j = 0; j < N; j++)
         if (truth[i][j])
-          System.out.printf("O");
-        else
-          System.out.printf("0");
-      System.out.println();
-    }
-
-    // Print the new stuff.
-    System.out.printf("\n\n");
-    for (int i = 0; i < N; i++) {
-      for (int j = 0; j < M; j++)
-        if (ttruth[i][j])
           System.out.printf("O");
         else
           System.out.printf("0");

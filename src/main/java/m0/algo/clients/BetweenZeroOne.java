@@ -1,3 +1,5 @@
+package com.m0.algo.clients;
+
 /*
  * Sedgewick 4th Edition: S1.1 - Basic Programming Model
  *
