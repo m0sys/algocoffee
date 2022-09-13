@@ -14,6 +14,6 @@ public class Algo {
     BinRepr.main(new String[] {"15"});
     BinRepr.main(new String[] {"16"});
 
-    Point2D.main(new String[] {});
+    // Point2D.main(new String[] {});
   }
 }

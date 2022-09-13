@@ -3,14 +3,13 @@ package com.m0.algo.graphics;
 // import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.Assert.*;
 
-import java.lang.Math;
 import org.junit.Test;
 
 public class Point2DTest {
-  @Test
-  public void verifyNoExceptionThrownOnMain() {
-    Point2D.main(new String[] {});
-  }
+  // @Test
+  // public void verifyNoExceptionThrownOnMain() {
+  //   Point2D.main(new String[] {});
+  // }
 
   @Test
   public void verifyNoExceptionThrownOnInit() {
