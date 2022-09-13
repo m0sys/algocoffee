@@ -12,7 +12,7 @@ public class Transpose {
   public static void main(String[] args) {
     if (args.length < 2) {
       System.out.println("Please enter 2 int command line argument.");
-      System.out.println("e.g. java MatrixStar 2000");
+      System.out.println("e.g. java Transpose 2000");
       return;
     }
 

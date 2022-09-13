@@ -12,7 +12,7 @@ public class BetweenZeroOne {
   public static void main(String[] args) {
     if (args.length < 2) {
       System.out.println("Please enter 3 command line arguments.");
-      System.out.println("e.g. java Year 2000");
+      System.out.println("e.g. java BetweenZeroOne 2000");
       return;
     }
 
