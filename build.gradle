@@ -18,7 +18,7 @@ repositories {
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     // implementation group: 'edu.princeton.cs', name: 'algs4', version: '1.0.4'
-    implementation 'com.github.kevin-wayne:algs4:master-SNAPSHOT'
+    // implementation 'com.github.kevin-wayne:algs4:master-SNAPSHOT'
 
 }
 

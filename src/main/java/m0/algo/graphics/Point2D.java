@@ -8,7 +8,7 @@ package com.m0.algo.graphics;
  * distance separating the closest pair of points.
  */
 
-import edu.princeton.cs.algs4.StdDraw;
+// import edu.princeton.cs.algs4.StdDraw;
 import java.lang.Math;
 
 public class Point2D {
@@ -33,7 +33,7 @@ public class Point2D {
 
   public void draw() {
     //
-    StdDraw.point(x, y);
+    // StdDraw.point(x, y);
   }
 
   private static double Square(double a) { return a * a; }
