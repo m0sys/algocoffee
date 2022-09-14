@@ -2,6 +2,7 @@ package com.m0.algo;
 
 import com.m0.algo.clients.BetweenZeroOne;
 import com.m0.algo.clients.BinRepr;
+import com.m0.algo.clients.Intersections;
 import com.m0.algo.clients.NearestPoints;
 import com.m0.algo.clients.Transpose;
 import com.m0.algo.graphics.Point2D;
@@ -16,6 +17,7 @@ public class Algo {
     // BinRepr.main(new String[] {"16"});
 
     // Point2D.main(new String[] {});
-    NearestPoints.main(new String[] {"10"});
+    // NearestPoints.main(new String[] {"10"});
+    Intersections.main(new String[] {"10"});
   }
 }
