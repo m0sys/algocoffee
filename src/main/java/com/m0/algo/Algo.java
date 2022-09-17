@@ -9,6 +9,10 @@ import com.m0.algo.graphics.Point2D;
 import com.m0.algo.search.BinarySearch;
 
 public class Algo {
+
+    public static void hello() {
+        System.out.println("Hello");
+    }
   public static void main(String[] args) {
     System.out.println("This is a test!");
     // String[] args2 = {"3", "4"};
