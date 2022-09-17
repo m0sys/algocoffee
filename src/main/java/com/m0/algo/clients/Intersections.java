@@ -35,6 +35,9 @@ public class Intersections {
       ivs[i] = new Interval1D(hi, lo);
     }
 
+    /* Fix leak */
+    input.close();
+
     for (int i = 0; i < N; i++)
       for (int j = 0; j < N; j++)
         if (i != j && ivs[i].intersects(ivs[j]))

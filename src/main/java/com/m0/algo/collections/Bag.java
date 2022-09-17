@@ -9,6 +9,8 @@ package com.m0.algo.collections;
  */
 public interface Bag<Item> {
   public void add(Item item);
+
   public boolean isEmpty();
+
   public int size();
 }
