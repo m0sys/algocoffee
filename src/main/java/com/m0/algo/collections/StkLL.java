@@ -44,6 +44,11 @@ public class StkLL<Item> implements Stack<Item>, Iterable<Item> {
     return item;
   }
 
+  @Override
+  public Item peek() {
+    return first.item;
+  }
+
   public Iterator<Item> iterator() {
     return new ListIterator();
   }

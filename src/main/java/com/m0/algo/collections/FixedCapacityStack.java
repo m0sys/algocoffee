@@ -29,6 +29,11 @@ public class FixedCapacityStack<Item> implements Stack<Item>, Iterable<Item> {
   }
 
   @Override
+  public Item peek() {
+    return a[sp - 1];
+  }
+
+  @Override
   public boolean isEmpty() {
     return sp == 0;
   }

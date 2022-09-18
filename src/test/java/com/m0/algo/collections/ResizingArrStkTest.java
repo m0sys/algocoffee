@@ -25,4 +25,16 @@ public class ResizingArrStkTest {
 
     for (int i = N - 1; i > 0; i--) assertEquals(i, (int) stk.pop());
   }
+
+  @Test
+  public void testPeek() {
+
+    ResizingArrStk<Integer> stk = new ResizingArrStk<Integer>();
+
+    for (int i = 0; i < 20; i++) stk.push(i);
+    assertEquals(20, stk.size());
+
+    assertEquals(19, (int) stk.peek());
+    assertEquals(20, stk.size());
+  }
 }

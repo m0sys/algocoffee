@@ -42,6 +42,11 @@ public class ResizingArrStk<Item> implements Stack<Item>, Iterable<Item> {
     return item;
   }
 
+  @Override
+  public Item peek() {
+    return a[sp - 1];
+  }
+
   public Iterator<Item> iterator() {
     return new ReverseArrIterator();
   }
