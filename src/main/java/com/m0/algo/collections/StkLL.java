@@ -10,7 +10,7 @@ import java.util.Iterator;
  * Implementation for a generic linked-lst stack.
  */
 
-public class StkLL<Item> implements Stack<Item>, Iterable<Item> {
+public class StkLL<Item> implements Stack<Item> {
   private Node first; /* top of the stack */
   private int sp; /* the stack pointer */
 

@@ -10,7 +10,7 @@ import java.util.Iterator;
  * Implementation for a generic resizing array stack.
  */
 
-public class ResizingArrStk<Item> implements Stack<Item>, Iterable<Item> {
+public class ResizingArrStk<Item> implements Stack<Item> {
   private Item[] a = (Item[]) new Object[1]; /* stack of items */
   private int sp = 0; /* the stack pointer */
 

@@ -10,7 +10,7 @@ import java.util.Iterator;
  * Implementation for a fixed capacity stack.
  */
 
-public class FixedCapacityStack<Item> implements Stack<Item>, Iterable<Item> {
+public class FixedCapacityStack<Item> implements Stack<Item> {
   private Item[] a; /* the stack */
   private int sp; /* the stack pointer */
 
