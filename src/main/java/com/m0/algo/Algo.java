@@ -1,11 +1,13 @@
 package com.m0.algo;
 
+import edu.princeton.cs.algs4.DoublingTest;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
 
   public static void testing_alg4jar(String[] args) {
-    int[] a = In.readInts(args[0]);
+
+    int a[] = new In(args[0]).readAllInts();
     for (int i = 0; i < 10; i++) {
       System.out.printf("%d: %d\n", i, a[i]);
     }
@@ -13,7 +15,7 @@ public class Algo {
 
   public static void main(String[] args) {
     System.out.println("This is a test!");
-    testing_alg4jar(args);
+    // testing_alg4jar(args);
 
     // String[] args2 = {"3", "4"};
     // Transpose.main(args2);
@@ -26,5 +28,9 @@ public class Algo {
     // Intersections.main(new String[] {"10"});
     // BinarySearch.main(new String[] {});
     // CopyStkCli.main(new String[] {});
+
+    // ThreeSum.main(args);
+    // Stopwatch.main(args);
+    DoublingTest.main(new String[] {});
   }
 }
