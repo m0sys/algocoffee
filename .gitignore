@@ -32,3 +32,5 @@ build
 bin/
 .classpath
 .settings/
+
+data/

@@ -1,4 +1,6 @@
 plugins {
+    /* Need this to create a Fat Jar. */
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
 }
 
@@ -17,8 +19,12 @@ repositories {
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-    // implementation group: 'edu.princeton.cs', name: 'algs4', version: '1.0.4'
-    // implementation 'com.github.kevin-wayne:algs4:master-SNAPSHOT'
+    // implementation 'edu.princeton.cs:algs4:1.0.3'
 
+    // implementation group: 'edu.princeton.cs', name: 'algs4', version: '1.0.4'
+    implementation 'com.github.kevin-wayne:algs4:master-SNAPSHOT'
 }
 
+shadowJar {
+    baseName "algocoffee"
+}
