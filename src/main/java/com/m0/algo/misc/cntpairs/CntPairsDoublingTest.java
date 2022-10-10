@@ -1,10 +1,10 @@
-package com.m0.algo.misc.threesum;
+package com.m0.algo.misc.cntpairs;
 
 import com.m0.algo.analysis.Stopwatch;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
-public class DoublingTest {
+public class CntPairsDoublingTest {
   public static double timeTrial(int N) {
     int MAX = 1000000;
     int[] a = new int[N];
@@ -12,7 +12,7 @@ public class DoublingTest {
     /* Run trial data size N. */
     for (int i = 0; i < N; i++) a[i] = StdRandom.uniform(-MAX, MAX);
     Stopwatch timer = new Stopwatch();
-    ThreeSumFast.cnt(a);
+    CntPairs.cnt(a);
 
     return timer.elapsedTime();
   }

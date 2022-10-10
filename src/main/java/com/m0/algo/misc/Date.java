@@ -1,4 +1,4 @@
-package com.m0.algo.other;
+package com.m0.algo.misc;
 
 /*
  * Sedgewick 4th Edition: S1.2 - Data Abstraction

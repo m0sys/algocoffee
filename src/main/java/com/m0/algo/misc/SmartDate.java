@@ -7,7 +7,6 @@ package com.m0.algo.misc;
  * raises an exception if the date is not legal.
  */
 
-import com.m0.algo.other.Date;
 
 public class SmartDate extends Date {
 

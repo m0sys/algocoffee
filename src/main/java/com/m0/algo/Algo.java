@@ -1,6 +1,6 @@
 package com.m0.algo;
 
-import edu.princeton.cs.algs4.DoublingTest;
+import com.m0.algo.misc.cntpairs.CntPairsDoublingTest;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
@@ -14,7 +14,7 @@ public class Algo {
   }
 
   public static void main(String[] args) {
-    System.out.println("This is a test!");
+    System.out.println("This is a test!!");
     // testing_alg4jar(args);
 
     // String[] args2 = {"3", "4"};
@@ -31,6 +31,8 @@ public class Algo {
 
     // ThreeSum.main(args);
     // Stopwatch.main(args);
-    DoublingTest.main(new String[] {});
+    // DoublingTest.main(new String[] {});
+
+    CntPairsDoublingTest.main(new String[] {});
   }
 }
