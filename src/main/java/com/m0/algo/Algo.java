@@ -1,6 +1,6 @@
 package com.m0.algo;
 
-import com.m0.algo.misc.cntpairs.CntPairsDoublingTest;
+import com.m0.algo.misc.commonitems.CommonItemsDoublingTest;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
@@ -33,6 +33,8 @@ public class Algo {
     // Stopwatch.main(args);
     // DoublingTest.main(new String[] {});
 
-    CntPairsDoublingTest.main(new String[] {});
+    // CntPairsDoublingTest.main(new String[] {});
+
+    CommonItemsDoublingTest.main(new String[] {});
   }
 }
