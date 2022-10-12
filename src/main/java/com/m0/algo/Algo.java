@@ -1,6 +1,8 @@
 package com.m0.algo;
 
-import com.m0.algo.misc.commonitems.CommonItemsDoublingTest;
+import com.m0.algo.sort.Bubble;
+import com.m0.algo.sort.Insertion;
+import com.m0.algo.sort.Selection;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
@@ -35,6 +37,10 @@ public class Algo {
 
     // CntPairsDoublingTest.main(new String[] {});
 
-    CommonItemsDoublingTest.main(new String[] {});
+    // CommonItemsDoublingTest.main(new String[] {});
+
+    Selection.main(new String[] {});
+    Insertion.main(new String[] {});
+    Bubble.main(new String[] {});
   }
 }
