@@ -16,6 +16,13 @@ public class Insertion extends GenericSort {
     }
   }
 
+  // private static void show(Comparable[] a) {
+  //   int N = a.length;
+  //   // for (int i = 0; i < N; i++) {
+  //   //     StdDraw.filledRectangle(x, y, halfWidth, halfHeight);
+  //   // }
+  // }
+
   public static void main(String[] args) {
     String[] a = {"S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E"};
     sort(a);
