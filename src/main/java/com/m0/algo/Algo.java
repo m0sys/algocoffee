@@ -2,12 +2,12 @@ package com.m0.algo;
 
 import com.m0.algo.sort.Bubble;
 import com.m0.algo.sort.Insertion;
+import com.m0.algo.sort.Merge;
+import com.m0.algo.sort.MergeBU;
 import com.m0.algo.sort.Selection;
 import com.m0.algo.sort.ShellSort;
 import com.m0.algo.sort.ShellSortArr;
 import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.StdDraw;
-import edu.princeton.cs.algs4.StdOut;
 
 public class Algo {
 
@@ -53,6 +53,10 @@ public class Algo {
     ShellSort.main(new String[] {});
     System.out.print("Shelling out:  ");
     ShellSortArr.main(new String[] {});
+    System.out.print("Merging out:  ");
+    Merge.main(new String[] {});
+    System.out.print("Merging out:  ");
+    MergeBU.main(new String[] {});
 
     // System.out.println("\n\nSpeed testing Shelly vs Insertion and Selection
     // sort:\n"); ShellCompare.main(new String[] {});
@@ -64,17 +68,18 @@ public class Algo {
     // StdDraw.setPenRadius(0.05);
     // StdDraw.setPenColor(StdDraw.BLUE);
     // StdDraw.point(0.5, 0.5);
-    int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-    int N = arr.length;
-    Double[] arrNorm = normalize(arr);
-    StdDraw.setPenColor(StdDraw.BLUE);
+    // int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    // int N = arr.length;
+    // Double[] arrNorm = normalize(arr);
+    // StdDraw.setPenColor(StdDraw.BLUE);
 
-    for (int i = 0; i < N; i++) {
-      StdOut.printf("arrNorm[%d] = %.1f\n", i, arrNorm[i]);
-      StdDraw.line(i / N, 0.0, i / N, arr[i] / 15);
-    }
+    // for (int i = 0; i < N; i++) {
+    //   StdOut.printf("arrNorm[%d] = %.1f\n", i, arrNorm[i]);
+    //   StdDraw.line(i / N, 0.0, i / N, arr[i] / 15);
+    // }
   }
 
+  /* Array Normalization inspired by BatchNorm. */
   private static Double[] normalize(int[] a) {
     int N = a.length;
     Double[] arr = new Double[N];
