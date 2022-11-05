@@ -5,6 +5,7 @@ import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
 import com.m0.algo.sort.Merge;
 import com.m0.algo.sort.MergeBU;
+import com.m0.algo.sort.Quick;
 import com.m0.algo.sort.Selection;
 import com.m0.algo.sort.ShellSort;
 import com.m0.algo.sort.ShellSortArr;
@@ -60,6 +61,8 @@ public class Algo {
     MergeBU.main(new String[] {});
     System.out.print("Merging out:  ");
     ImprovedMerge.main(new String[] {});
+    System.out.print("Quick out: ");
+    Quick.main(new String[] {});
     // System.out.print("Merging out:  ");
     // FastMerge.main(new String[] {});
 
