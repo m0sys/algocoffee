@@ -1,6 +1,7 @@
 package com.m0.algo;
 
 import com.m0.algo.sort.Bubble;
+import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
 import com.m0.algo.sort.Merge;
 import com.m0.algo.sort.MergeBU;
@@ -57,9 +58,16 @@ public class Algo {
     Merge.main(new String[] {});
     System.out.print("Merging out:  ");
     MergeBU.main(new String[] {});
+    System.out.print("Merging out:  ");
+    ImprovedMerge.main(new String[] {});
+    // System.out.print("Merging out:  ");
+    // FastMerge.main(new String[] {});
 
-    // System.out.println("\n\nSpeed testing Shelly vs Insertion and Selection
+    // System.out.println("\n\nSpeed testing Shelly vs Insertion/Selection/Merge
     // sort:\n"); ShellCompare.main(new String[] {});
+
+    System.out.println("\n\nSpeed testing Vanilla Merge with Other Merges: \n");
+    // MergeCompare.main(new String[] {});
 
     // System.out.println("\n\n Testing Num CMPs for Shell Sort:\n\n");
     // ShellSortApproxCmp.main(new String[] {});

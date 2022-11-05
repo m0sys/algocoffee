@@ -2,14 +2,17 @@ package com.m0.algo.sort;
 
 /*
  * Sedgewick 4th Edition: S2.2 - Merge Sort
+ *
+ * FIXME: seems like its not working at all.
+ *
+ * Problem 2.2.10: Faster merge. Implement a version of merge() that copies the
+ * second half of a[] to aux[] in decreasing order and then does the merge back
+ * to a[]. This change allows you to remove the code to test that each of the
+ * halves has been exhausted from the inner loop. Note: The resulting sort is
+ * not stable (see page 341).
  */
 
-/*
- * Merge sort recursively sorts the left and right half of an array and merges
- * them together into the final sorted array.
- */
-
-public class Merge extends GenericSort {
+public class FastMerge extends GenericSort {
   private static Comparable[] aux;
 
   public static void sort(Comparable[] a) {
@@ -29,8 +32,25 @@ public class Merge extends GenericSort {
   private static void merge(Comparable[] a, int lo, int mid, int hi) {
     int i = lo, j = mid + 1;
 
+    System.out.println("Printing a before copy...");
+    for (int k = lo; k <= hi; k++) {
+      System.out.print(a[k]);
+      System.out.print(" ");
+    }
+    System.out.println();
     /* Copy the partically sorted array into the aux array. */
-    for (int k = lo; k <= hi; k++) aux[k] = a[k];
+
+    /* Copy first half in asc. */
+    for (int k = lo; k <= mid; k++) aux[k] = a[k];
+    /* Copy second half in desc. */
+    for (int k = hi, k2 = j; k >= j; k--, k2++) aux[k2] = a[k];
+
+    System.out.println("Printing aux after copy...");
+    for (int k = lo; k <= hi; k++) {
+      System.out.print(aux[k]);
+      System.out.print(" ");
+    }
+    System.out.println("\n");
 
     /* Merge back the aux into the array in sorted order. */
     for (int k = lo; k <= hi; k++)

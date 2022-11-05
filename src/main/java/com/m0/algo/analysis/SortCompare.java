@@ -1,10 +1,12 @@
 package com.m0.algo.analysis;
 
+import com.m0.algo.sort.FastMerge;
+import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
+import com.m0.algo.sort.Merge;
 import com.m0.algo.sort.Selection;
 import com.m0.algo.sort.ShellSort;
 import edu.princeton.cs.algs4.Heap;
-import edu.princeton.cs.algs4.Merge;
 import edu.princeton.cs.algs4.Quick;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
@@ -21,6 +23,8 @@ public class SortCompare {
     if (alg.equals("Selection")) Selection.sort(a);
     if (alg.equals("Shell")) ShellSort.sort(a);
     if (alg.equals("Merge")) Merge.sort(a);
+    if (alg.equals("FastMerge")) FastMerge.sort(a);
+    if (alg.equals("ImprovedMerge")) ImprovedMerge.sort(a);
     if (alg.equals("Quick")) Quick.sort(a);
     if (alg.equals("Heap")) Heap.sort(a);
 

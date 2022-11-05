@@ -18,6 +18,7 @@ public class ShellCompare {
           new String[] {"Shell", "Insertion", Integer.toString(N), Integer.toString(10)});
       SortCompare.main(
           new String[] {"Shell", "Selection", Integer.toString(N), Integer.toString(10)});
+      SortCompare.main(new String[] {"Shell", "Merge", Integer.toString(N), Integer.toString(10)});
 
       N *= 2;
     }

@@ -1,7 +1,7 @@
 package com.m0.algo.sort;
 
 /*
- * Sedgewick 4th Edition: S2.1 - Elementary Sorts
+ * Sedgewick 4th Edition: S2.2 - Merge Sort
  */
 
 /*
