@@ -1,5 +1,6 @@
 package com.m0.algo;
 
+import com.m0.algo.analysis.sort.QuickCompare;
 import com.m0.algo.sort.Bubble;
 import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
@@ -88,6 +89,9 @@ public class Algo {
     //   StdOut.printf("arrNorm[%d] = %.1f\n", i, arrNorm[i]);
     //   StdDraw.line(i / N, 0.0, i / N, arr[i] / 15);
     // }
+    //
+    System.out.println("\n\nSpeed testing Vanilla Quick with Vanilla Merge othe Quicks: \n");
+    QuickCompare.main(new String[] {});
   }
 
   /* Array Normalization inspired by BatchNorm. */
