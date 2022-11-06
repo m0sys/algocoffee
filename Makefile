@@ -4,6 +4,12 @@ run_main:
 run_main_recompile: compile_shadow
 	java -jar build/libs/algocoffee-all.jar
 
+run_tests:
+	./gradlew build
+
+run_tests_debug:
+	./gradlew build --info
+
 report:
 	open build/reports/tests/test/index.html
 

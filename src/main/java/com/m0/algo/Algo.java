@@ -1,10 +1,12 @@
 package com.m0.algo;
 
+import com.m0.algo.analysis.sort.QuickCompare;
 import com.m0.algo.sort.Bubble;
 import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
 import com.m0.algo.sort.Merge;
 import com.m0.algo.sort.MergeBU;
+import com.m0.algo.sort.Quick;
 import com.m0.algo.sort.Selection;
 import com.m0.algo.sort.ShellSort;
 import com.m0.algo.sort.ShellSortArr;
@@ -60,6 +62,8 @@ public class Algo {
     MergeBU.main(new String[] {});
     System.out.print("Merging out:  ");
     ImprovedMerge.main(new String[] {});
+    System.out.print("Quick out: ");
+    Quick.main(new String[] {});
     // System.out.print("Merging out:  ");
     // FastMerge.main(new String[] {});
 
@@ -85,6 +89,9 @@ public class Algo {
     //   StdOut.printf("arrNorm[%d] = %.1f\n", i, arrNorm[i]);
     //   StdDraw.line(i / N, 0.0, i / N, arr[i] / 15);
     // }
+    //
+    System.out.println("\n\nSpeed testing Vanilla Quick with Vanilla Merge othe Quicks: \n");
+    QuickCompare.main(new String[] {});
   }
 
   /* Array Normalization inspired by BatchNorm. */
