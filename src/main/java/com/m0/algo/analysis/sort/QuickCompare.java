@@ -18,6 +18,7 @@ public class QuickCompare {
       N *= 2;
       SortCompare.main(
           new String[] {"Quick", "ImprovedQuick", Integer.toString(N), Integer.toString(10)});
+      SortCompare.main(new String[] {"Quick", "QuickX", Integer.toString(N), Integer.toString(10)});
       N *= 2;
     }
   }
