@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MaxPQTest {
-  private final int MAX_N = 10;
+  private final int MAX_N = 16;
 
   @Test
   public void testIsEmpty() {
@@ -38,5 +38,21 @@ public class MaxPQTest {
     assertEquals(200, pq.delMax());
     assertEquals(40, pq.delMax());
     assertEquals(20, pq.delMax());
+  }
+
+  @Test
+  public void testResizing() {
+    int MAX_SZ = 1000;
+    MaxPQ pq = new MaxPQ<Integer>();
+    for (int i = 0; i < MAX_SZ; i++) {
+      pq.insert(i);
+    }
+
+    int lastMax = Integer.MAX_VALUE;
+    for (int i = 0; i < MAX_SZ; i++) {
+      int newMax = (int) pq.delMax();
+      assertTrue(lastMax > newMax);
+      lastMax = newMax;
+    }
   }
 }

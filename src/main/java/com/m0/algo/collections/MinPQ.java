@@ -29,7 +29,7 @@ public class MinPQ<Key extends Comparable<Key>> {
   }
 
   public void insert(Key k) {
-    /* TODO: add resizing code + bound checking. */
+    if (N == pq.length) resize(2 * pq.length);
     pq[++N] = k;
     swim(N);
   }
@@ -38,6 +38,7 @@ public class MinPQ<Key extends Comparable<Key>> {
     Key min = pq[1];
     exch(1, N--);
     pq[N + 1] = null;
+    if (N > 0 && N == pq.length / 4) resize(pq.length / 2);
     sink(1);
     return min;
   }
@@ -75,5 +76,11 @@ public class MinPQ<Key extends Comparable<Key>> {
 
   private int left(int k) {
     return 2 * k;
+  }
+
+  private void resize(int sz) {
+    var tmp = (Key[]) new Comparable[sz];
+    for (int i = 0; i < N; i++) tmp[i] = pq[i];
+    pq = tmp;
   }
 }

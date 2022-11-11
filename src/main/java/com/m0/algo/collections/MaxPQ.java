@@ -16,6 +16,14 @@ public class MaxPQ<Key extends Comparable<Key>> {
   private Key[] pq;
   private int N = 0;
 
+  public MaxPQ() {
+    pq = (Key[]) new Comparable[1];
+  }
+
+  /*
+   * Precondition: maxN must be a power of two for resizing to work without
+   * truncation.
+   */
   public MaxPQ(int maxN) {
     pq = (Key[]) new Comparable[maxN + 1];
   }
@@ -29,16 +37,18 @@ public class MaxPQ<Key extends Comparable<Key>> {
   }
 
   public void insert(Key k) {
-    /* TODO: add resizing code + bound checking. */
-    pq[++N] = k;
+    if (N == pq.length) resize(2 * pq.length);
+    pq[N] = k;
     swim(N);
+    N++;
   }
 
   public Key delMax() {
-    Key max = pq[1];
-    exch(1, N--);
-    pq[N + 1] = null;
-    sink(1);
+    Key max = pq[0];
+    exch(0, --N);
+    pq[N] = null;
+    if (N > 0 && N == pq.length / 4) resize(pq.length / 2);
+    sink(0);
     return max;
   }
 
@@ -54,16 +64,16 @@ public class MaxPQ<Key extends Comparable<Key>> {
 
   private void swim(int k) {
 
-    while (k > 1 && less(parent(k), k)) {
+    while (k > 0 && less(parent(k), k)) {
       exch(parent(k), k);
       k = parent(k);
     }
   }
 
   private void sink(int k) {
-    while (left(k) <= N) {
+    while (left(k) < N) {
       int j = left(k);
-      if (j < N && less(j, j + 1)) j++;
+      if (j < N - 1 && less(j, j + 1)) j++;
       if (!less(k, j)) break;
       exch(j, k);
       k = j;
@@ -71,11 +81,17 @@ public class MaxPQ<Key extends Comparable<Key>> {
   }
 
   private int parent(int k) {
-    return k / 2;
+    return (k - 1) / 2;
   }
 
   private int left(int k) {
-    return 2 * k;
+    return 2 * k + 1;
+  }
+
+  private void resize(int sz) {
+    Key[] tmp = (Key[]) new Comparable[sz];
+    for (int i = 0; i < N; i++) tmp[i] = pq[i];
+    pq = tmp;
   }
 
   // private int right(int k) {

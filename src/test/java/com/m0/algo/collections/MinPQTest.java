@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MinPQTest {
-  private final int MAX_N = 10;
+  private final int MAX_N = 16;
 
   @Test
   public void testIsEmpty() {
