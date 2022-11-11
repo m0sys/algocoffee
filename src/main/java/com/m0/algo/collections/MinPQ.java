@@ -49,7 +49,7 @@ public class MinPQ<Key extends Comparable<Key>> {
   private void exch(int i, int j) {
     Key tmp = pq[i];
     pq[i] = pq[j];
-    pq[j] = pq[i];
+    pq[j] = tmp;
   }
 
   private void swim(int k) {
@@ -63,6 +63,7 @@ public class MinPQ<Key extends Comparable<Key>> {
     while (left(k) <= N) {
       int j = left(k);
       if (j < N && greater(j, j + 1)) j++;
+      if (!greater(k, j)) break;
       exch(j, k);
       k = j;
     }
