@@ -1,7 +1,7 @@
 package com.m0.algo;
 
-import com.m0.algo.analysis.sort.QuickCompare;
 import com.m0.algo.sort.Bubble;
+import com.m0.algo.sort.HeapSort;
 import com.m0.algo.sort.ImprovedMerge;
 import com.m0.algo.sort.Insertion;
 import com.m0.algo.sort.Merge;
@@ -64,6 +64,8 @@ public class Algo {
     ImprovedMerge.main(new String[] {});
     System.out.print("Quick out: ");
     Quick.main(new String[] {});
+    System.out.print("Heap out: ");
+    HeapSort.main(new String[] {});
     // System.out.print("Merging out:  ");
     // FastMerge.main(new String[] {});
 
@@ -91,7 +93,7 @@ public class Algo {
     // }
     //
     System.out.println("\n\nSpeed testing Vanilla Quick with Vanilla Merge othe Quicks: \n");
-    QuickCompare.main(new String[] {});
+    // QuickCompare.main(new String[] {});
   }
 
   /* Array Normalization inspired by BatchNorm. */
