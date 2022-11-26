@@ -7,7 +7,7 @@ package com.m0.algo.collections;
 /*
  * Iterface for a generic Bag datastructure.
  */
-public interface Bag<Item> {
+public interface Bag<Item> extends Iterable<Item> {
   public void add(Item item);
 
   public boolean isEmpty();

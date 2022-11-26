@@ -12,11 +12,16 @@ import java.util.Iterator;
 
 public class BagLL<Item> implements Bag<Item> {
   private Node first; // head of ll
-  private int sz = 0;
+  private int sz;
 
   private class Node {
     Item itm;
     Node nxt;
+  }
+
+  public BagLL() {
+    first = null;
+    sz = 0;
   }
 
   /* Add new item to head of ll in O(1) time. */

@@ -1,15 +1,6 @@
 package com.m0.algo;
 
-import com.m0.algo.sort.Bubble;
-import com.m0.algo.sort.HeapSort;
-import com.m0.algo.sort.ImprovedMerge;
-import com.m0.algo.sort.Insertion;
-import com.m0.algo.sort.Merge;
-import com.m0.algo.sort.MergeBU;
-import com.m0.algo.sort.Quick;
-import com.m0.algo.sort.Selection;
-import com.m0.algo.sort.ShellSort;
-import com.m0.algo.sort.ShellSortArr;
+import com.m0.algo.clients.TestSearch;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
@@ -46,34 +37,40 @@ public class Algo {
 
     // CommonItemsDoublingTest.main(new String[] {});
 
-    System.out.print("Selling out:   ");
-    Selection.main(new String[] {});
-    System.out.print("Inserting out: ");
-    Insertion.main(new String[] {});
-    System.out.print("Bubbling out:  ");
-    Bubble.main(new String[] {});
-    System.out.print("Shelling out:  ");
-    ShellSort.main(new String[] {});
-    System.out.print("Shelling out:  ");
-    ShellSortArr.main(new String[] {});
-    System.out.print("Merging out:  ");
-    Merge.main(new String[] {});
-    System.out.print("Merging out:  ");
-    MergeBU.main(new String[] {});
-    System.out.print("Merging out:  ");
-    ImprovedMerge.main(new String[] {});
-    System.out.print("Quick out: ");
-    Quick.main(new String[] {});
-    System.out.print("Heap out: ");
-    HeapSort.main(new String[] {});
+    /*
+     * ********************
+     * Section 2 - Sorting
+     * ********************
+     */
+
+    // System.out.print("Selling out:   ");
+    // Selection.main(new String[] {});
+    // System.out.print("Inserting out: ");
+    // Insertion.main(new String[] {});
+    // System.out.print("Bubbling out:  ");
+    // Bubble.main(new String[] {});
+    // System.out.print("Shelling out:  ");
+    // ShellSort.main(new String[] {});
+    // System.out.print("Shelling out:  ");
+    // ShellSortArr.main(new String[] {});
+    // System.out.print("Merging out:  ");
+    // Merge.main(new String[] {});
+    // System.out.print("Merging out:  ");
+    // MergeBU.main(new String[] {});
+    // System.out.print("Merging out:  ");
+    // ImprovedMerge.main(new String[] {});
+    // System.out.print("Quick out: ");
+    // Quick.main(new String[] {});
+    // System.out.print("Heap out: ");
+    // HeapSort.main(new String[] {});
     // System.out.print("Merging out:  ");
     // FastMerge.main(new String[] {});
 
     // System.out.println("\n\nSpeed testing Shelly vs Insertion/Selection/Merge
     // sort:\n"); ShellCompare.main(new String[] {});
 
-    System.out.println("\n\nSpeed testing Vanilla Merge with Other Merges: \n");
-    // MergeCompare.main(new String[] {});
+    // System.out.println("\n\nSpeed testing Vanilla Merge with Other Merges:
+    // \n"); MergeCompare.main(new String[] {});
 
     // System.out.println("\n\n Testing Num CMPs for Shell Sort:\n\n");
     // ShellSortApproxCmp.main(new String[] {});
@@ -92,8 +89,15 @@ public class Algo {
     //   StdDraw.line(i / N, 0.0, i / N, arr[i] / 15);
     // }
     //
-    System.out.println("\n\nSpeed testing Vanilla Quick with Vanilla Merge othe Quicks: \n");
-    // QuickCompare.main(new String[] {});
+    // System.out.println("\n\nSpeed testing Vanilla Quick with Vanilla Merge
+    // othe Quicks: \n"); QuickCompare.main(new String[] {});
+
+    /*
+     * *******************
+     * Section 4 - Graphs
+     * *******************
+     */
+    TestSearch.main(new String[] {"data/tinyG.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
