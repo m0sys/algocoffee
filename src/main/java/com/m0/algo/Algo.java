@@ -1,8 +1,10 @@
 package com.m0.algo;
 
+import com.m0.algo.graph.BreathFirstPaths;
 import com.m0.algo.graph.DepthFirstPaths;
 import com.m0.algo.graph.DepthFirstSearch;
 import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Algo {
 
@@ -98,8 +100,12 @@ public class Algo {
      * Section 4 - Graphs
      * *******************
      */
+    StdOut.println("DFS: ");
     DepthFirstSearch.main(new String[] {"data/tinyG.txt", "0"});
+    StdOut.println("\nDFS Paths: ");
     DepthFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
+    StdOut.println("\nBFS Paths: ");
+    BreathFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
