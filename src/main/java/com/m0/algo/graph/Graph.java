@@ -1,6 +1,7 @@
 package com.m0.algo.graph;
 
 import com.m0.algo.collections.BagLL;
+import com.m0.algo.collections.StkLL;
 import edu.princeton.cs.algs4.In;
 
 /*
@@ -23,6 +24,26 @@ public class Graph {
     adj = (BagLL<Integer>[]) new BagLL[V];
 
     for (int v = 0; v < V; v++) adj[v] = new BagLL<Integer>();
+  }
+
+  public Graph(Graph g) {
+    this.V = g.V;
+    this.E = g.E;
+
+    this.adj = (BagLL<Integer>[]) new BagLL[V];
+    for (int v = 0; v < V; v++) adj[v] = new BagLL<>();
+
+    /* Add edges. */
+    for (int v = 0; v < V; v++) {
+      StkLL<Integer> stk = new StkLL<>();
+      /* NOTE: bag inserts in rev order so have to rev order to get match. */
+      for (int w : g.adj(v)) {
+        stk.push(w);
+      }
+      while (!stk.isEmpty()) {
+        adj[v].add(stk.pop());
+      }
+    }
   }
 
   public Graph(In in) {
