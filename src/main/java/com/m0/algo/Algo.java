@@ -4,6 +4,7 @@ import com.m0.algo.graph.BreathFirstPaths;
 import com.m0.algo.graph.CC;
 import com.m0.algo.graph.DepthFirstPaths;
 import com.m0.algo.graph.DepthFirstSearch;
+import com.m0.algo.graph.SymbolGraph;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -109,6 +110,7 @@ public class Algo {
     BreathFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
     StdOut.println("\nCC: ");
     CC.main(new String[] {"data/tinyG.txt"});
+    SymbolGraph.main(new String[] {"data/movies.txt", "/"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
