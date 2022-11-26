@@ -15,11 +15,13 @@ import edu.princeton.cs.algs4.StdOut;
 public class BreathFirstPaths {
   private boolean[] visited;
   private int[] edgeTo; // last vertex on known path to this vertex
+  private int[] distTo; // num edges to this vertex
   private final int s;
 
   public BreathFirstPaths(Graph G, int s) {
     visited = new boolean[G.V()];
     edgeTo = new int[G.V()];
+    distTo = new int[G.V()];
     this.s = s;
     bfs(G, s);
   }
@@ -27,6 +29,7 @@ public class BreathFirstPaths {
   private void bfs(Graph G, int s) {
     QueueLL<Integer> queue = new QueueLL<>();
     visited[s] = true;
+    distTo[s] = 0;
     queue.enqueue(s);
     while (!queue.isEmpty()) {
       int v = queue.dequeue();
@@ -35,10 +38,17 @@ public class BreathFirstPaths {
       for (int w : adjlst)
         if (!visited[w]) {
           edgeTo[w] = v;
+          distTo[w] = distTo(v) + 1;
           visited[w] = true;
           queue.enqueue(w);
         }
     }
+  }
+
+  /* Return number of edges along shortest path from source to v. */
+  public int distTo(int v) {
+    if (!hasPathTo(v)) return Integer.MAX_VALUE;
+    return distTo[v];
   }
 
   public boolean hasPathTo(int v) {

@@ -107,7 +107,7 @@ public class Algo {
     StdOut.println("\nDFS Paths: ");
     DepthFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
     StdOut.println("\nBFS Paths: ");
-    BreathFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
+    BreathFirstPaths.main(new String[] {"data/tinyG.txt", "0"});
     StdOut.println("\nCC: ");
     CC.main(new String[] {"data/tinyG.txt"});
     SymbolGraph.main(new String[] {"data/movies.txt", "/"});

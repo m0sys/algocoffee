@@ -66,6 +66,13 @@ public class Graph {
   }
 
   public void addEdge(int v, int w) {
+    /* Don't allow self loops and parallel edges. */
+    if (v == w) return;
+    /* NOTE: this makes addEdge O(E) instead of O(1). */
+    for (int e : adj[v]) {
+      if (w == e) return;
+    }
+
     adj[v].add(w);
     adj[w].add(v);
     E++;
