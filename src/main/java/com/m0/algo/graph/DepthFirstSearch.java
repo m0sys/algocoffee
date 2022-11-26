@@ -1,5 +1,8 @@
 package com.m0.algo.graph;
 
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdOut;
+
 /*
  * Sedgewick 4th Edition: S4.1 - Undirected Graphs
  */
@@ -29,5 +32,19 @@ public class DepthFirstSearch {
 
   public int count() {
     return count;
+  }
+
+  public static void main(String[] args) {
+    Graph graph = new Graph(new In(args[0]));
+    int s = Integer.parseInt(args[1]);
+    DepthFirstSearch search = new DepthFirstSearch(graph, s);
+
+    for (int v = 0; v < graph.V(); v++) {
+      if (search.marked(v)) StdOut.print(v + " ");
+    }
+    StdOut.println();
+
+    if (search.count() != graph.V()) StdOut.print("NOT ");
+    StdOut.println("connected");
   }
 }

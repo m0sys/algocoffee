@@ -1,6 +1,7 @@
 package com.m0.algo;
 
-import com.m0.algo.clients.TestSearch;
+import com.m0.algo.graph.DepthFirstPaths;
+import com.m0.algo.graph.DepthFirstSearch;
 import edu.princeton.cs.algs4.In;
 
 public class Algo {
@@ -97,7 +98,8 @@ public class Algo {
      * Section 4 - Graphs
      * *******************
      */
-    TestSearch.main(new String[] {"data/tinyG.txt", "0"});
+    DepthFirstSearch.main(new String[] {"data/tinyG.txt", "0"});
+    DepthFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
