@@ -15,4 +15,11 @@ public class GraphTest {
     g2.addEdge(0, 3);
     assertNotEquals(g.toString(), g2.toString());
   }
+
+  @Test
+  public void testHasEdge() {
+    Graph g = new Graph(new In("data/tinyG.txt"));
+    assertTrue(g.hasEdge(0, 5));
+    assertFalse(g.hasEdge(5, 7));
+  }
 }

@@ -71,6 +71,13 @@ public class Graph {
     E++;
   }
 
+  public boolean hasEdge(int v, int w) {
+    boolean found = false;
+    var adjlst = adj[v];
+    for (int e : adjlst) if (w == e) found = true;
+    return found;
+  }
+
   public int degree(int v) {
     int deg = 0;
     var adjlst = adj[v];
