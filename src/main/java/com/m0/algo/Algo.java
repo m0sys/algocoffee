@@ -1,6 +1,7 @@
 package com.m0.algo;
 
 import com.m0.algo.graph.BreathFirstPaths;
+import com.m0.algo.graph.CC;
 import com.m0.algo.graph.DepthFirstPaths;
 import com.m0.algo.graph.DepthFirstSearch;
 import edu.princeton.cs.algs4.In;
@@ -106,6 +107,8 @@ public class Algo {
     DepthFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
     StdOut.println("\nBFS Paths: ");
     BreathFirstPaths.main(new String[] {"data/tinyCG.txt", "0"});
+    StdOut.println("\nCC: ");
+    CC.main(new String[] {"data/tinyG.txt"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
