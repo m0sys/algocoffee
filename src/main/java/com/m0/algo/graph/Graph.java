@@ -9,9 +9,8 @@ import edu.princeton.cs.algs4.In;
  */
 
 /*
- * Implementation of AdjLst representation of a Undirected Graph.
+ * Implementation of AdjLst representation of an Undirected Graph.
  */
-
 public class Graph {
 
   private final int V; // num vertices

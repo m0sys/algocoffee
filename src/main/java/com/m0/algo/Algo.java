@@ -102,6 +102,8 @@ public class Algo {
      * Section 4 - Graphs
      * *******************
      */
+
+    /* ----------- 4.1: Graphs ------------ */
     StdOut.println("DFS: ");
     DepthFirstSearch.main(new String[] {"data/tinyG.txt", "0"});
     StdOut.println("\nDFS Paths: ");
@@ -111,6 +113,8 @@ public class Algo {
     StdOut.println("\nCC: ");
     CC.main(new String[] {"data/tinyG.txt"});
     SymbolGraph.main(new String[] {"data/movies.txt", "/"});
+
+    /* ------------ 4.2: Digraphs ------------ */
   }
 
   /* Array Normalization inspired by BatchNorm. */
