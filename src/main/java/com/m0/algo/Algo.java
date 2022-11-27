@@ -4,6 +4,9 @@ import com.m0.algo.graph.BreathFirstPaths;
 import com.m0.algo.graph.CC;
 import com.m0.algo.graph.DepthFirstPaths;
 import com.m0.algo.graph.DepthFirstSearch;
+import com.m0.algo.graph.DiBFSPaths;
+import com.m0.algo.graph.DiDFSIterPaths;
+import com.m0.algo.graph.DiDFSPaths;
 import com.m0.algo.graph.Topological;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
@@ -118,6 +121,12 @@ public class Algo {
     /* ------------ 4.2: Digraphs ------------ */
     StdOut.println("\nTopological Sort: ");
     Topological.main(new String[] {"data/jobs.txt", "/"});
+    StdOut.println("\nDi DFS Paths: ");
+    DiDFSPaths.main(new String[] {"data/mediumDG.txt", "0"});
+    StdOut.println("\nDi DFS Iter Paths: ");
+    DiDFSIterPaths.main(new String[] {"data/mediumDG.txt", "0"});
+    StdOut.println("\nDi BFS Paths: ");
+    DiBFSPaths.main(new String[] {"data/mediumDG.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */

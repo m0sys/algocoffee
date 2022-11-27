@@ -55,6 +55,13 @@ public class Digraph {
     }
   }
 
+  public boolean hasEdge(int v, int w) {
+    boolean found = false;
+    var adjlst = adj[v];
+    for (int e : adjlst) if (w == e) found = true;
+    return found;
+  }
+
   public int V() {
     return V;
   }
