@@ -124,9 +124,9 @@ public class Algo {
     StdOut.println("\nDi DFS Paths: ");
     DiDFSPaths.main(new String[] {"data/mediumDG.txt", "0"});
     StdOut.println("\nDi DFS Iter Paths: ");
-    DiDFSIterPaths.main(new String[] {"data/mediumDG.txt", "0"});
+    DiDFSIterPaths.main(new String[] {"data/tinyDG.txt", "0"});
     StdOut.println("\nDi BFS Paths: ");
-    DiBFSPaths.main(new String[] {"data/mediumDG.txt", "0"});
+    DiBFSPaths.main(new String[] {"data/tinyDG.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
