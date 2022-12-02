@@ -27,9 +27,6 @@ public class SymbolDigraph {
     keys = new String[st.size()];
     for (String name : st.keys()) keys[st.get(name)] = name;
 
-    keys = new String[st.size()];
-    for (String name : st.keys()) keys[st.get(name)] = name;
-
     /* Second pass builds the graph. */
     G = new Digraph(st.size());
     in = new In(stream);
