@@ -8,6 +8,8 @@ import com.m0.algo.graph.DiBFSPaths;
 import com.m0.algo.graph.DiDFSIterPaths;
 import com.m0.algo.graph.DiDFSPaths;
 import com.m0.algo.graph.Topological;
+import com.m0.algo.graph.weighted.LazyPrimMST;
+import com.m0.algo.graph.weighted.PrimMST;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -127,6 +129,12 @@ public class Algo {
     DiDFSIterPaths.main(new String[] {"data/tinyDG.txt", "0"});
     StdOut.println("\nDi BFS Paths: ");
     DiBFSPaths.main(new String[] {"data/tinyDG.txt", "0"});
+
+    /* ------------ 4.3: MST ------------ */
+    StdOut.println("\nLazyPrim's MST: ");
+    LazyPrimMST.main(new String[] {"data/tinyEWG.txt"});
+    StdOut.println("\nPrim's MST: ");
+    PrimMST.main(new String[] {"data/tinyEWG.txt"});
   }
 
   /* Array Normalization inspired by BatchNorm. */

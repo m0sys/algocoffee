@@ -9,7 +9,7 @@ public class MaxPQTest {
 
   @Test
   public void testIsEmpty() {
-    MaxPQ pq = new MaxPQ<Integer>(MAX_N);
+    MaxPQ pq = new MaxPQ<Integer>();
     assertTrue(pq.isEmpty());
     pq.insert(20);
     assertFalse(pq.isEmpty());
@@ -17,7 +17,7 @@ public class MaxPQTest {
 
   @Test
   public void testSize() {
-    MaxPQ pq = new MaxPQ<Integer>(MAX_N);
+    MaxPQ pq = new MaxPQ<Integer>();
     assertEquals(0, pq.size());
     for (int i = 0; i < MAX_N; i++) {
       pq.insert(i);
@@ -27,7 +27,7 @@ public class MaxPQTest {
 
   @Test
   public void testInsertAndDelMax() {
-    MaxPQ pq = new MaxPQ<Integer>(MAX_N);
+    MaxPQ pq = new MaxPQ<Integer>();
     pq.insert(20);
     assertEquals(20, pq.delMax());
     pq.insert(100);

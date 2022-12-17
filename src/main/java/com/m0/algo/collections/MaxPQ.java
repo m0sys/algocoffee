@@ -20,14 +20,6 @@ public class MaxPQ<Key extends Comparable<Key>> {
     pq = (Key[]) new Comparable[1];
   }
 
-  /*
-   * Precondition: maxN must be a power of two for resizing to work without
-   * truncation.
-   */
-  public MaxPQ(int maxN) {
-    pq = (Key[]) new Comparable[maxN + 1];
-  }
-
   public boolean isEmpty() {
     return N == 0;
   }
