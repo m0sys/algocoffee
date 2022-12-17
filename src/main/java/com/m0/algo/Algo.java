@@ -8,6 +8,7 @@ import com.m0.algo.graph.DiBFSPaths;
 import com.m0.algo.graph.DiDFSIterPaths;
 import com.m0.algo.graph.DiDFSPaths;
 import com.m0.algo.graph.Topological;
+import com.m0.algo.graph.weighted.DijkstraSP;
 import com.m0.algo.graph.weighted.LazyPrimMST;
 import com.m0.algo.graph.weighted.PrimMST;
 import edu.princeton.cs.algs4.In;
@@ -135,6 +136,10 @@ public class Algo {
     LazyPrimMST.main(new String[] {"data/tinyEWG.txt"});
     StdOut.println("\nPrim's MST: ");
     PrimMST.main(new String[] {"data/tinyEWG.txt"});
+
+    /* ------------ 4.4: SPT ------------ */
+    StdOut.println("\nDijkstra's SP: ");
+    DijkstraSP.main(new String[] {"data/tinyEWD.txt", "0"});
   }
 
   /* Array Normalization inspired by BatchNorm. */
